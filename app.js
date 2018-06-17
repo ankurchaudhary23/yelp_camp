@@ -18,7 +18,7 @@ var commentRoutes    = require("./routes/comments"),
     
     
     //daata base connect 
-// mongoose.connect("mongodb://localhost/yelp_camp_v10");
+mongoose.connect(process.env.DATABASEURL);
 mongoose.connect("mongodb://ankur:jackadms23@ds161710.mlab.com:61710/yelpcampbootcamp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
