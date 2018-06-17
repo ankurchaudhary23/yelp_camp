@@ -18,8 +18,8 @@ var commentRoutes    = require("./routes/comments"),
     
     
     //daata base connect 
-mongoose.connect(process.env.DATABASEURL);
-mongoose.connect("mongodb://ankur:jackadms23@ds161710.mlab.com:61710/yelpcampbootcamp");
+mongoose.connect(process.env.DATABASE);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname +"/public"));
