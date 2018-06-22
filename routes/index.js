@@ -14,7 +14,7 @@ router.get("/", function(req, res){
 // auth routes
 // show sign up page 
 router.get("/register",function(req,res){
-    res.render("register");
+    res.render("register",{page:'register'});
 })
 
 // Post route gather info from singup page 
@@ -34,7 +34,7 @@ router.post("/register",function(req,res){
 
 // login page
 router.get("/login",function(req,res){
-    res.render("login");
+    res.render("login",{page:'login'});
 });
 
 // handel login request
