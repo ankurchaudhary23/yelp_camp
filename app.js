@@ -18,7 +18,9 @@ var commentRoutes    = require("./routes/comments"),
     
     
     //daata base connect 
-mongoose.connect(process.env.DATABASE);
+    console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb://localhost/yelp_camp_v10");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
